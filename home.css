@@ -1,0 +1,105 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0px;
+	margin: 0px;
+}
+/*styling header*/
+.header{
+	position: absolute;
+	height: 40px;
+	width: 100%;
+	z-index: 4;
+	background-color: #999;
+}
+/* end styling header*/
+/*styling sidebar*/
+.sidebar{
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	z-index: 3;
+	background-color: #666;
+	padding-top: 50px;
+	border-radius: 20px;
+}
+/*end styling sidebar*/
+/*styling sidebar unordered list*/
+.sidebar ul{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+/* end styling unordered list*/
+.sidebar ul li{
+	padding:20px 10px;
+	border-bottom:2px solid #fff;
+}
+.sidebar ul li a{
+	color:white;
+	text-decoration:none;
+}
+.main-content{
+	padding-top:50px;
+	background-attachment:fixed;
+}
+
+/* defining the screen size using media query */
+@media screen and (min-width:600px){
+	.sidebar{
+		width:80px;
+	}
+	.sidebar ul li span:nth-child(2){
+		display:none;
+	}
+	.sidebar ul li{
+		text-align:center;
+	}
+	.main-content{
+		margin-left:80px;
+
+	}
+}
+@media screen and (min-width:1000px){
+	.sidebar{
+		width:200px;
+	}
+	.sidebar ul li span:nth-child(2){
+		display:inline;
+	}
+	.sidebar ul li{
+		text-align:left;
+	}
+	.main-content{
+	margin-left:200px;
+	}
+}
+@media screen and (max-width:600px){
+	.sidebar{
+		width:80px;
+	}
+	.sidebar ul li span:nth-child(2){
+		display:none;
+	}
+	.sidebar ul li{
+		text-align:center;
+	}
+	.main-content{
+	margin-left:80px;
+	}
+}
+@media screen and (max-width:400px){
+	.sidebar{
+		width:40px;
+	}
+	.sidebar ul li span:nth-child(2){
+		display:none;
+	}
+	.sidebar ul li{
+		text-align:center;
+	}
+	.main-content{
+	margin-left:40px;
+	}
+}
